@@ -4,7 +4,7 @@
         <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="price" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State"/>
+        <relationship name="state" maxCount="1" deletionRule="Cascade" destinationEntity="State"/>
     </entity>
     <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>

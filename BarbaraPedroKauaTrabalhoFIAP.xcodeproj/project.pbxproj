@@ -22,6 +22,7 @@
 		EAE025FA259DE88000EDA6E4 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025F8259DE88000EDA6E4 /* StateTableViewCell.swift */; };
 		EAE025FB259DE88000EDA6E4 /* StateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE025F9259DE88000EDA6E4 /* StateTableViewCell.xib */; };
 		EAE02600259E0F7C00EDA6E4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAE025FF259E0F7C00EDA6E4 /* Settings.bundle */; };
+		EAE02605259E14A000EDA6E4 /* UILabel+EmptyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE02604259E14A000EDA6E4 /* UILabel+EmptyStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EAE025F8259DE88000EDA6E4 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 		EAE025F9259DE88000EDA6E4 /* StateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateTableViewCell.xib; sourceTree = "<group>"; };
 		EAE025FF259E0F7C00EDA6E4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		EAE02604259E14A000EDA6E4 /* UILabel+EmptyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+EmptyStatus.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */,
+				EAE02604259E14A000EDA6E4 /* UILabel+EmptyStatus.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE02605259E14A000EDA6E4 /* UILabel+EmptyStatus.swift in Sources */,
 				EA6B3695259D25800067DF84 /* AddEditProductViewController.swift in Sources */,
 				EA6B3664259CDF670067DF84 /* PurchaseListTableViewController.swift in Sources */,
 				EAE025E9259D7EFE00EDA6E4 /* UIViewController+Context.swift in Sources */,

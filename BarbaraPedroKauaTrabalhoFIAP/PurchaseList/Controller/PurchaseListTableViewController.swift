@@ -10,14 +10,6 @@ import CoreData
 
 class PurchaseListTableViewController: UITableViewController {
     // MARK: - Properties
-    let emptyList: UILabel = {
-        let label:UILabel = UILabel(frame: .zero)
-        label.text = "Sua lista está vazia!"
-        label.textAlignment = .center
-        label.font = UIFont.italicSystemFont(ofSize: 16.0)
-        return label
-    }()
-    
     lazy var fetchedResultsController: NSFetchedResultsController<Product> = {
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescription: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -53,7 +45,7 @@ class PurchaseListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = fetchedResultsController.fetchedObjects?.count ?? 0
-        tableView.backgroundView = count > 0 ? nil : emptyList
+        tableView.backgroundView = count > 0 ? nil : UILabel().emptyList
         return count
     }
   

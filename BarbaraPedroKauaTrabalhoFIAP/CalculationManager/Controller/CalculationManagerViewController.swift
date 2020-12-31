@@ -53,7 +53,7 @@ class CalculationManagerViewController: UIViewController {
         let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
         let sortDescription: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescription]
-       
+        
         do {
             statesList = try context?.fetch(fetchRequest) ?? []
             self.statesListTableView?.reloadData()
@@ -113,6 +113,7 @@ class CalculationManagerViewController: UIViewController {
     }
     
     private func getFromUserDefault() {
+        userDefault.synchronize()
         self.iofValueTxt?.text = userDefault.string(forKey: "iofValue")
         self.dolarValueTxt?.text = userDefault.string(forKey: "dolarValue")
     }
@@ -121,7 +122,7 @@ class CalculationManagerViewController: UIViewController {
     @IBAction func addNewStateAndTax(_ sender: Any) {
         self.showStateAlert()
     }
-
+    
 }
 
 extension CalculationManagerViewController: UITableViewDelegate, UITableViewDataSource {
@@ -131,12 +132,19 @@ extension CalculationManagerViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if statesList.count > 0 {
+            self.statesListTableView?.backgroundView = nil
+            self.statesListTableView?.separatorStyle = .singleLine
+        } else {
+            self.statesListTableView?.backgroundView = UILabel().emptyList
+            self.statesListTableView?.separatorStyle = .none
+        }
         return statesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "stateCellIdentifier", for: indexPath) as? StateTableViewCell else { return UITableViewCell() }
-
+        
         cell.configureCell(with: statesList[indexPath.row])
         
         return cell

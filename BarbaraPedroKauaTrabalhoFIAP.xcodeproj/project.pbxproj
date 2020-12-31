@@ -18,6 +18,7 @@
 		EA9D4AA1259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AA0259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift */; };
 		EA9D4AAC259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AAB259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift */; };
 		EAE025E9259D7EFE00EDA6E4 /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */; };
+		EAE025F3259D9A1700EDA6E4 /* CalculationManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025F2259D9A1700EDA6E4 /* CalculationManagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EA9D4AAB259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbaraPedroKauaTrabalhoFIAPUITests.swift; sourceTree = "<group>"; };
 		EA9D4AAD259BC00800D714E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
+		EAE025F2259D9A1700EDA6E4 /* CalculationManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationManagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		EA9D4A85259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */ = {
 			isa = PBXGroup;
 			children = (
+				EAE025F0259D99E500EDA6E4 /* CalculationManager */,
 				EA6B3692259D252B0067DF84 /* AddEditProduct */,
 				EA6B3653259CDECC0067DF84 /* PurchaseList */,
 				EA6B3652259CDEB50067DF84 /* Main */,
@@ -207,6 +210,22 @@
 				EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EAE025F0259D99E500EDA6E4 /* CalculationManager */ = {
+			isa = PBXGroup;
+			children = (
+				EAE025F1259D9A0200EDA6E4 /* Controller */,
+			);
+			path = CalculationManager;
+			sourceTree = "<group>";
+		};
+		EAE025F1259D9A0200EDA6E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAE025F2259D9A1700EDA6E4 /* CalculationManagerViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +364,7 @@
 				EA9D4A91259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld in Sources */,
 				EA9D4A87259BC00700D714E3 /* AppDelegate.swift in Sources */,
 				EA6B3677259CE9C20067DF84 /* PurchaseTableViewCell.swift in Sources */,
+				EAE025F3259D9A1700EDA6E4 /* CalculationManagerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

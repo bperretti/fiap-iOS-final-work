@@ -34,6 +34,9 @@ class PurchaseListTableViewController: UITableViewController {
     // MARK: - Super methods
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.loadProducts()
     }
     
@@ -73,6 +76,14 @@ class PurchaseListTableViewController: UITableViewController {
                 print("error to delete a product in db")
             }
         }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let addEditVC = segue.destination as? AddEditProductViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        addEditVC.product = fetchedResultsController.object(at: indexPath)
     }
 }
 

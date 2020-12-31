@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 protocol StatesDelegate: NSObject {
-    func updateProductState(_ state: State)
+    func updateProductState(_ statesList: [State])
 }
 
 class CalculationManagerViewController: UIViewController {
@@ -19,23 +19,26 @@ class CalculationManagerViewController: UIViewController {
     @IBOutlet weak var statesListTableView: UITableView?
     
     // MARK: - Properties
-    var statesList:[State] = []
-    weak var delegate: StatesDelegate?
-    var selectedState: State = State() {
+    var statesList: [State] = [] {
         didSet {
-            delegate?.updateProductState(selectedState)
+            delegate?.updateProductState(statesList)
         }
     }
+    weak var delegate: StatesDelegate?
+
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.loadStates()
         self.registerStateCellNib()
         
         statesListTableView?.delegate = self
         statesListTableView?.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadStates()
     }
     
     // MARK: - Methods
@@ -105,7 +108,7 @@ class CalculationManagerViewController: UIViewController {
 }
 
 extension CalculationManagerViewController: UITableViewDelegate, UITableViewDataSource {
-    
+    // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

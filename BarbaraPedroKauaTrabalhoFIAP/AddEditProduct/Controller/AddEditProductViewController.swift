@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import CoreData
+
+protocol ToolbarPickerViewDelegate: NSObject {
+    func didTapDone()
+    func didTapCancel()
+}
 
 class AddEditProductViewController: UIViewController {
     
@@ -19,16 +25,17 @@ class AddEditProductViewController: UIViewController {
     // MARK: - Properties
     var product: Product?
     var imageProduct: UIImage?
-    let statesPicker = [String](arrayLiteral: "Florida", "NY")
+    var statesList: [State] = []
+    let statePickerView = UIPickerView()
+    var stateSelected: State?
+    weak var toolbarDelegate: ToolbarPickerViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupView()
-        
-        let statePickerView = UIPickerView()
-        statePickerView.delegate = self
-        nameStatetxt?.inputView = statePickerView
+        self.configurePickerView()
+        self.loadStates()
     }
     
     // MARK: - IBActions
@@ -41,7 +48,7 @@ class AddEditProductViewController: UIViewController {
             }
             alert.addAction(cameraAction)
         }
-    
+        
         let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (_) in
             self.selectPictureFrom(.photoLibrary)
         }
@@ -69,28 +76,61 @@ class AddEditProductViewController: UIViewController {
         product?.name = self.nameProductTxt?.text ?? ""
         product?.price = ((self.priceProductTxt?.text ?? "0.0") as NSString).floatValue
         product?.image = imageProduct?.jpegData(compressionQuality: 0.9)
+        product?.state = stateSelected
         
         view.endEditing(true)
         
         do {
             try context?.save()
             navigationController?.popViewController(animated: true)
-        } catch {
-            print("error to save in db")
+        } catch let error {
+            print("error to save in db \(error.localizedDescription)")
         }
         
         
     }
     // MARK: - Navigation
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let calculationVC = segue.destination as? CalculationManagerViewController {
+            calculationVC.delegate = self
+        }
     }
-    */
-
+    
     // MARK: - Methods
+    private func setupView() {
+        if let product = product {
+            title = "Editar Produto"
+            nameProductTxt?.text = product.name
+            nameStatetxt?.text = product.state?.name
+            stateSelected = product.state
+            priceProductTxt?.text = String(product.price)
+            
+            if let data = product.image {
+                imageProduct = UIImage(data: data)
+                imageProductBtn?.setBackgroundImage(imageProduct, for: .normal)
+            }
+            
+            saveProductBtn?.setTitle("Editar", for: .normal)
+        } else {
+            title = "Cadastrar Produto"
+            saveProductBtn?.setTitle("Cadastrar", for: .normal)
+        }
+    }
+    
+    private func loadStates() {
+        let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
+        let sortDescription: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescription]
+        
+        do {
+            statesList = try context?.fetch(fetchRequest) ?? []
+            self.statePickerView.reloadAllComponents()
+        } catch {
+            print("Error return states list from db")
+        }
+    }
+    
     private func selectPictureFrom(_ sourceType: UIImagePickerController.SourceType) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = sourceType
@@ -100,44 +140,79 @@ class AddEditProductViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    private func setupView() {
-        if let product = product {
-            title = "Editar Produto"
-            nameProductTxt?.text = product.name
-            nameStatetxt?.text = product.state?.name
-            priceProductTxt?.text = String(product.price)
-            if let data = product.image {
-                imageProductBtn?.setBackgroundImage(UIImage(data: data), for: .normal)
-            }
-            saveProductBtn?.setTitle("Editar", for: .normal)
-        } else {
-            title = "Cadastrar Produto"
-            saveProductBtn?.setTitle("Cadastrar", for: .normal)
-        }
+    private func configurePickerView() {
+        statePickerView.delegate = self
+        statePickerView.dataSource = self
+        self.toolbarDelegate = self
+        
+        statePickerView.backgroundColor = .white
+        statePickerView.showsSelectionIndicator = true
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelTapped))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        nameStatetxt?.inputView = statePickerView
+        nameStatetxt?.inputAccessoryView = toolBar
+        
+    }
+    
+    @objc func doneTapped() {
+        self.toolbarDelegate?.didTapDone()
+    }
+    
+    @objc func cancelTapped() {
+        self.toolbarDelegate?.didTapCancel()
     }
 }
 
 
-extension AddEditProductViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddEditProductViewController: UIPickerViewDelegate, UIPickerViewDataSource, ToolbarPickerViewDelegate {
+    
+    // MARK: - Picker View
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return statesPicker.count
+        return statesList.count
     }
     
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return statesPicker[row]
+        return statesList[row].name
     }
-
+    
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        nameStatetxt?.text = statesPicker[row]
+        nameStatetxt?.text = statesList[row].name
+        stateSelected = statesList[row]
+    }
+    
+    func didTapDone() {
+        let row = self.statePickerView.selectedRow(inComponent: 0)
+        self.statePickerView.selectRow(row, inComponent: 0, animated: false)
+        self.nameStatetxt?.text = statesList[row].name
+        stateSelected = statesList[row]
+        self.nameStatetxt?.resignFirstResponder()
+    }
+    
+    func didTapCancel() {
+        self.nameStatetxt?.text = nil
+        self.nameStatetxt?.resignFirstResponder()
     }
     
 }
 
 extension AddEditProductViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - Image Picker View
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[.originalImage] as? UIImage {
@@ -148,4 +223,11 @@ extension AddEditProductViewController: UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension AddEditProductViewController: StatesDelegate {
+    func updateProductState(_ statesList: [State]) {
+        self.statesList = statesList
+        self.statePickerView.reloadAllComponents()
+    }
 }

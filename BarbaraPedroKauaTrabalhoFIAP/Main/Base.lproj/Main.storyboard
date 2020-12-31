@@ -90,6 +90,7 @@
                                     <outlet property="purchaseImageView" destination="3ia-dP-qnn" id="N2c-r8-yxM"/>
                                     <outlet property="purchaseNameProductLbl" destination="OfX-9h-few" id="z2w-Dt-7bo"/>
                                     <outlet property="purchasePriceLbl" destination="U5O-3a-qyo" id="MnS-tk-FI6"/>
+                                    <segue destination="iZK-kI-23K" kind="show" id="m6T-BK-1YN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -426,6 +427,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="m6T-BK-1YN"/>
         <segue reference="PMK-uA-rQk"/>
     </inferredMetricsTieBreakers>
     <resources>

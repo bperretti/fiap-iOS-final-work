@@ -4,14 +4,15 @@
         <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="price" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="state" maxCount="1" deletionRule="Cascade" destinationEntity="State"/>
+        <relationship name="state" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="product" inverseEntity="State"/>
     </entity>
     <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="tax" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="tax" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="product" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="state" inverseEntity="Product"/>
     </entity>
     <elements>
         <element name="Product" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="State" positionX="-54" positionY="-9" width="128" height="59"/>
+        <element name="State" positionX="-54" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

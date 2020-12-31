@@ -25,7 +25,7 @@ class CalculationManagerViewController: UIViewController {
         }
     }
     weak var delegate: StatesDelegate?
-
+    private var userDefault = UserDefaults.standard
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -38,7 +38,14 @@ class CalculationManagerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.loadStates()
+        self.getFromUserDefault()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.saveUserDefault()
     }
     
     // MARK: - Methods
@@ -98,6 +105,16 @@ class CalculationManagerViewController: UIViewController {
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func saveUserDefault() {
+        userDefault.set(dolarValueTxt?.text, forKey: "dolarValue")
+        userDefault.set(iofValueTxt?.text, forKey: "iofValue")
+    }
+    
+    private func getFromUserDefault() {
+        self.iofValueTxt?.text = userDefault.string(forKey: "iofValue")
+        self.dolarValueTxt?.text = userDefault.string(forKey: "dolarValue")
     }
     
     // MARK: - IBAction

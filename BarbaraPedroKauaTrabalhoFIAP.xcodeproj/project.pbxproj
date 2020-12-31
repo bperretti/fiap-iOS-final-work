@@ -21,6 +21,7 @@
 		EAE025F3259D9A1700EDA6E4 /* CalculationManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025F2259D9A1700EDA6E4 /* CalculationManagerViewController.swift */; };
 		EAE025FA259DE88000EDA6E4 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025F8259DE88000EDA6E4 /* StateTableViewCell.swift */; };
 		EAE025FB259DE88000EDA6E4 /* StateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE025F9259DE88000EDA6E4 /* StateTableViewCell.xib */; };
+		EAE02600259E0F7C00EDA6E4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAE025FF259E0F7C00EDA6E4 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EAE025F2259D9A1700EDA6E4 /* CalculationManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationManagerViewController.swift; sourceTree = "<group>"; };
 		EAE025F8259DE88000EDA6E4 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 		EAE025F9259DE88000EDA6E4 /* StateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateTableViewCell.xib; sourceTree = "<group>"; };
+		EAE025FF259E0F7C00EDA6E4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9D4A8F259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld */,
+				EAE025FF259E0F7C00EDA6E4 /* Settings.bundle */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				EA9D4A96259BC00700D714E3 /* LaunchScreen.storyboard in Resources */,
 				EA9D4A93259BC00700D714E3 /* Assets.xcassets in Resources */,
+				EAE02600259E0F7C00EDA6E4 /* Settings.bundle in Resources */,
 				EA9D4A8E259BC00700D714E3 /* Main.storyboard in Resources */,
 				EAE025FB259DE88000EDA6E4 /* StateTableViewCell.xib in Resources */,
 			);

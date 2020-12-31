@@ -1,14 +1,14 @@
 //
-//  TrabalhoConclusaoiOSFiapTests.swift
-//  TrabalhoConclusaoiOSFiapTests
+//  BarbaraPedroKauaTrabalhoFIAPTests.swift
+//  BarbaraPedroKauaTrabalhoFIAP
 //
 //  Created by Bárbara Perretti on 29/12/20.
 //
 
 import XCTest
-@testable import TrabalhoConclusaoiOSFiap
+@testable import BarbaraPedroKauaTrabalhoFIAP
 
-class TrabalhoConclusaoiOSFiapTests: XCTestCase {
+class BarbaraPedroKauaTrabalhoFIAPTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

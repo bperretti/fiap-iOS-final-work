@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6B3664259CDF670067DF84 /* PurchaseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3662259CDF670067DF84 /* PurchaseListTableViewController.swift */; };
+		EA6B3677259CE9C20067DF84 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3675259CE9C20067DF84 /* PurchaseTableViewCell.swift */; };
+		EA6B3695259D25800067DF84 /* AddEditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3694259D25800067DF84 /* AddEditProductViewController.swift */; };
 		EA9D4A87259BC00700D714E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A86259BC00700D714E3 /* AppDelegate.swift */; };
-		EA9D4A89259BC00700D714E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A88259BC00700D714E3 /* SceneDelegate.swift */; };
-		EA9D4A8B259BC00700D714E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A8A259BC00700D714E3 /* ViewController.swift */; };
 		EA9D4A8E259BC00700D714E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9D4A8C259BC00700D714E3 /* Main.storyboard */; };
-		EA9D4A91259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A8F259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodeld */; };
+		EA9D4A91259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A8F259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld */; };
 		EA9D4A93259BC00700D714E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9D4A92259BC00700D714E3 /* Assets.xcassets */; };
 		EA9D4A96259BC00700D714E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9D4A94259BC00700D714E3 /* LaunchScreen.storyboard */; };
-		EA9D4AA1259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AA0259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.swift */; };
-		EA9D4AAC259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AAB259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.swift */; };
+		EA9D4AA1259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AA0259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift */; };
+		EA9D4AAC259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4AAB259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift */; };
+		EAE025E9259D7EFE00EDA6E4 /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +38,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA9D4A83259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrabalhoConclusaoiOSFiap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6B3662259CDF670067DF84 /* PurchaseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseListTableViewController.swift; sourceTree = "<group>"; };
+		EA6B3675259CE9C20067DF84 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
+		EA6B3694259D25800067DF84 /* AddEditProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductViewController.swift; sourceTree = "<group>"; };
+		EA9D4A83259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarbaraPedroKauaTrabalhoFIAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9D4A86259BC00700D714E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA9D4A88259BC00700D714E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA9D4A8A259BC00700D714E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA9D4A8D259BC00700D714E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA9D4A90259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrabalhoConclusaoiOSFiap.xcdatamodel; sourceTree = "<group>"; };
 		EA9D4A92259BC00700D714E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9D4A95259BC00700D714E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9D4A97259BC00700D714E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA9D4A9C259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrabalhoConclusaoiOSFiapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA9D4AA0259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrabalhoConclusaoiOSFiapTests.swift; sourceTree = "<group>"; };
+		EA9D4A9C259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarbaraPedroKauaTrabalhoFIAPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9D4AA0259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbaraPedroKauaTrabalhoFIAPTests.swift; sourceTree = "<group>"; };
 		EA9D4AA2259BC00800D714E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA9D4AA7259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrabalhoConclusaoiOSFiapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA9D4AAB259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrabalhoConclusaoiOSFiapUITests.swift; sourceTree = "<group>"; };
+		EA9D4AA7259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarbaraPedroKauaTrabalhoFIAPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9D4AAB259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbaraPedroKauaTrabalhoFIAPUITests.swift; sourceTree = "<group>"; };
 		EA9D4AAD259BC00800D714E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +82,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA6B3652259CDEB50067DF84 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D4A86259BC00700D714E3 /* AppDelegate.swift */,
+				EA9D4A8C259BC00700D714E3 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EA6B3653259CDECC0067DF84 /* PurchaseList */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B365E259CDF320067DF84 /* View */,
+				EA6B3654259CDED80067DF84 /* Controller */,
+			);
+			path = PurchaseList;
+			sourceTree = "<group>";
+		};
+		EA6B3654259CDED80067DF84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B3662259CDF670067DF84 /* PurchaseListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA6B365E259CDF320067DF84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B3675259CE9C20067DF84 /* PurchaseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA6B3692259D252B0067DF84 /* AddEditProduct */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B3693259D25360067DF84 /* Controller */,
+			);
+			path = AddEditProduct;
+			sourceTree = "<group>";
+		};
+		EA6B3693259D25360067DF84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B3694259D25800067DF84 /* AddEditProductViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EA9D4A7A259BC00700D714E3 = {
 			isa = PBXGroup;
 			children = (
-				EA9D4A85259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */,
-				EA9D4A9F259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests */,
-				EA9D4AAA259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests */,
+				EA9D4A85259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */,
+				EA9D4A9F259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests */,
+				EA9D4AAA259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests */,
 				EA9D4A84259BC00700D714E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,52 +145,76 @@
 		EA9D4A84259BC00700D714E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA9D4A83259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.app */,
-				EA9D4A9C259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.xctest */,
-				EA9D4AA7259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.xctest */,
+				EA9D4A83259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP.app */,
+				EA9D4A9C259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.xctest */,
+				EA9D4AA7259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA9D4A85259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */ = {
+		EA9D4A85259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */ = {
 			isa = PBXGroup;
 			children = (
-				EA9D4A86259BC00700D714E3 /* AppDelegate.swift */,
-				EA9D4A88259BC00700D714E3 /* SceneDelegate.swift */,
-				EA9D4A8A259BC00700D714E3 /* ViewController.swift */,
-				EA9D4A8C259BC00700D714E3 /* Main.storyboard */,
-				EA9D4A92259BC00700D714E3 /* Assets.xcassets */,
-				EA9D4A94259BC00700D714E3 /* LaunchScreen.storyboard */,
+				EA6B3692259D252B0067DF84 /* AddEditProduct */,
+				EA6B3653259CDECC0067DF84 /* PurchaseList */,
+				EA6B3652259CDEB50067DF84 /* Main */,
+				EAE025D9259D594000EDA6E4 /* Files */,
+				EAE025E7259D7EDA00EDA6E4 /* Extensions */,
+				EAE025DA259D595A00EDA6E4 /* Supporting Files */,
 				EA9D4A97259BC00700D714E3 /* Info.plist */,
-				EA9D4A8F259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodeld */,
 			);
-			path = TrabalhoConclusaoiOSFiap;
+			path = BarbaraPedroKauaTrabalhoFIAP;
 			sourceTree = "<group>";
 		};
-		EA9D4A9F259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests */ = {
+		EA9D4A9F259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA9D4AA0259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.swift */,
+				EA9D4AA0259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift */,
 				EA9D4AA2259BC00800D714E3 /* Info.plist */,
 			);
-			path = TrabalhoConclusaoiOSFiapTests;
+			path = BarbaraPedroKauaTrabalhoFIAPTests;
 			sourceTree = "<group>";
 		};
-		EA9D4AAA259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests */ = {
+		EA9D4AAA259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EA9D4AAB259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.swift */,
+				EA9D4AAB259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift */,
 				EA9D4AAD259BC00800D714E3 /* Info.plist */,
 			);
-			path = TrabalhoConclusaoiOSFiapUITests;
+			path = BarbaraPedroKauaTrabalhoFIAPUITests;
+			sourceTree = "<group>";
+		};
+		EAE025D9259D594000EDA6E4 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D4A8F259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		EAE025DA259D595A00EDA6E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D4A92259BC00700D714E3 /* Assets.xcassets */,
+				EA9D4A94259BC00700D714E3 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAE025E7259D7EDA00EDA6E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA9D4A82259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */ = {
+		EA9D4A82259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA9D4AB0259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiap" */;
+			buildConfigurationList = EA9D4AB0259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAP" */;
 			buildPhases = (
 				EA9D4A7F259BC00700D714E3 /* Sources */,
 				EA9D4A80259BC00700D714E3 /* Frameworks */,
@@ -146,14 +224,14 @@
 			);
 			dependencies = (
 			);
-			name = TrabalhoConclusaoiOSFiap;
+			name = BarbaraPedroKauaTrabalhoFIAP;
 			productName = TrabalhoConclusaoiOSFiap;
-			productReference = EA9D4A83259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.app */;
+			productReference = EA9D4A83259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA9D4A9B259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests */ = {
+		EA9D4A9B259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA9D4AB3259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiapTests" */;
+			buildConfigurationList = EA9D4AB3259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAPTests" */;
 			buildPhases = (
 				EA9D4A98259BC00800D714E3 /* Sources */,
 				EA9D4A99259BC00800D714E3 /* Frameworks */,
@@ -164,14 +242,14 @@
 			dependencies = (
 				EA9D4A9E259BC00800D714E3 /* PBXTargetDependency */,
 			);
-			name = TrabalhoConclusaoiOSFiapTests;
+			name = BarbaraPedroKauaTrabalhoFIAPTests;
 			productName = TrabalhoConclusaoiOSFiapTests;
-			productReference = EA9D4A9C259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.xctest */;
+			productReference = EA9D4A9C259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EA9D4AA6259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests */ = {
+		EA9D4AA6259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA9D4AB6259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiapUITests" */;
+			buildConfigurationList = EA9D4AB6259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAPUITests" */;
 			buildPhases = (
 				EA9D4AA3259BC00800D714E3 /* Sources */,
 				EA9D4AA4259BC00800D714E3 /* Frameworks */,
@@ -182,9 +260,9 @@
 			dependencies = (
 				EA9D4AA9259BC00800D714E3 /* PBXTargetDependency */,
 			);
-			name = TrabalhoConclusaoiOSFiapUITests;
+			name = BarbaraPedroKauaTrabalhoFIAPUITests;
 			productName = TrabalhoConclusaoiOSFiapUITests;
-			productReference = EA9D4AA7259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.xctest */;
+			productReference = EA9D4AA7259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +287,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA9D4A7E259BC00700D714E3 /* Build configuration list for PBXProject "TrabalhoConclusaoiOSFiap" */;
+			buildConfigurationList = EA9D4A7E259BC00700D714E3 /* Build configuration list for PBXProject "BarbaraPedroKauaTrabalhoFIAP" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,9 +300,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA9D4A82259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */,
-				EA9D4A9B259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests */,
-				EA9D4AA6259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests */,
+				EA9D4A82259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */,
+				EA9D4A9B259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests */,
+				EA9D4AA6259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,10 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9D4A91259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodeld in Sources */,
-				EA9D4A8B259BC00700D714E3 /* ViewController.swift in Sources */,
+				EA6B3695259D25800067DF84 /* AddEditProductViewController.swift in Sources */,
+				EA6B3664259CDF670067DF84 /* PurchaseListTableViewController.swift in Sources */,
+				EAE025E9259D7EFE00EDA6E4 /* UIViewController+Context.swift in Sources */,
+				EA9D4A91259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld in Sources */,
 				EA9D4A87259BC00700D714E3 /* AppDelegate.swift in Sources */,
-				EA9D4A89259BC00700D714E3 /* SceneDelegate.swift in Sources */,
+				EA6B3677259CE9C20067DF84 /* PurchaseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9D4AA1259BC00800D714E3 /* TrabalhoConclusaoiOSFiapTests.swift in Sources */,
+				EA9D4AA1259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9D4AAC259BC00800D714E3 /* TrabalhoConclusaoiOSFiapUITests.swift in Sources */,
+				EA9D4AAC259BC00800D714E3 /* BarbaraPedroKauaTrabalhoFIAPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +369,12 @@
 /* Begin PBXTargetDependency section */
 		EA9D4A9E259BC00800D714E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA9D4A82259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */;
+			target = EA9D4A82259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */;
 			targetProxy = EA9D4A9D259BC00800D714E3 /* PBXContainerItemProxy */;
 		};
 		EA9D4AA9259BC00800D714E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA9D4A82259BC00700D714E3 /* TrabalhoConclusaoiOSFiap */;
+			target = EA9D4A82259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */;
 			targetProxy = EA9D4AA8259BC00800D714E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,15 +522,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiap/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.barbara.TrabalhoConclusaoiOSFiap;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.barbara.pedro.kaua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -461,15 +542,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiap/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.barbara.TrabalhoConclusaoiOSFiap;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.barbara.pedro.kaua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -480,7 +562,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiapTests/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,7 +573,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrabalhoConclusaoiOSFiap.app/TrabalhoConclusaoiOSFiap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarbaraPedroKauaTrabalhoFIAP.app/BarbaraPedroKauaTrabalhoFIAP";
 			};
 			name = Debug;
 		};
@@ -502,7 +584,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiapTests/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +595,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrabalhoConclusaoiOSFiap.app/TrabalhoConclusaoiOSFiap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarbaraPedroKauaTrabalhoFIAP.app/BarbaraPedroKauaTrabalhoFIAP";
 			};
 			name = Release;
 		};
@@ -523,7 +605,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiapUITests/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,7 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73NDB75A3E;
-				INFOPLIST_FILE = TrabalhoConclusaoiOSFiapUITests/Info.plist;
+				INFOPLIST_FILE = BarbaraPedroKauaTrabalhoFIAPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +642,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA9D4A7E259BC00700D714E3 /* Build configuration list for PBXProject "TrabalhoConclusaoiOSFiap" */ = {
+		EA9D4A7E259BC00700D714E3 /* Build configuration list for PBXProject "BarbaraPedroKauaTrabalhoFIAP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA9D4AAE259BC00800D714E3 /* Debug */,
@@ -569,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA9D4AB0259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiap" */ = {
+		EA9D4AB0259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA9D4AB1259BC00800D714E3 /* Debug */,
@@ -578,7 +660,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA9D4AB3259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiapTests" */ = {
+		EA9D4AB3259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAPTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA9D4AB4259BC00800D714E3 /* Debug */,
@@ -587,7 +669,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA9D4AB6259BC00800D714E3 /* Build configuration list for PBXNativeTarget "TrabalhoConclusaoiOSFiapUITests" */ = {
+		EA9D4AB6259BC00800D714E3 /* Build configuration list for PBXNativeTarget "BarbaraPedroKauaTrabalhoFIAPUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA9D4AB7259BC00800D714E3 /* Debug */,
@@ -599,13 +681,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EA9D4A8F259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodeld */ = {
+		EA9D4A8F259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				EA9D4A90259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodel */,
 			);
 			currentVersion = EA9D4A90259BC00700D714E3 /* TrabalhoConclusaoiOSFiap.xcdatamodel */;
-			path = TrabalhoConclusaoiOSFiap.xcdatamodeld;
+			path = PurchaseDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

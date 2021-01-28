@@ -142,20 +142,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1138.90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-b6-GFg">
-                                <rect key="frame" x="117" y="214" width="180" height="56.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-b6-GFg">
+                                <rect key="frame" x="171" y="214" width="72.5" height="57"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em R$:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15h-YD-jLB">
-                                <rect key="frame" x="133" y="330.5" width="148" height="34"/>
+                                <rect key="frame" x="133" y="331" width="148" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3677.90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CZ-8t-mNZ">
-                                <rect key="frame" x="114.5" y="384.5" width="185" height="56.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CZ-8t-mNZ">
+                                <rect key="frame" x="171" y="385" width="72.5" height="57"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,6 +175,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zux-DD-ely"/>
+                    <connections>
+                        <outlet property="totalDollarLbl" destination="Whm-b6-GFg" id="pik-Gn-7tp"/>
+                        <outlet property="totalReaisLbl" destination="4CZ-8t-mNZ" id="XyF-nm-fQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcM-aW-0HA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -386,6 +390,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="Gw6-gG-y9I"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="paymentWithCard:" destination="iZK-kI-23K" eventType="valueChanged" id="RFU-jE-9LY"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -449,7 +456,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="m6T-BK-1YN"/>
-        <segue reference="wGz-Oa-M5Y"/>
+        <segue reference="PMK-uA-rQk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>

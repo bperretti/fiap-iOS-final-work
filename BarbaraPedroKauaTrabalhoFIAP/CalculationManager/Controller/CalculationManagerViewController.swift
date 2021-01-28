@@ -71,7 +71,7 @@ class CalculationManagerViewController: UIViewController {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
         alert.addTextField { (nameTextField) in
-            nameTextField.placeholder = "Noma do estado"
+            nameTextField.placeholder = "Nome do estado"
             nameTextField.text = state?.name
         }
         

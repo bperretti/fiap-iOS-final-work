@@ -28,6 +28,7 @@ class AddEditProductViewController: UIViewController {
     var statesList: [State] = []
     let statePickerView = UIPickerView()
     var stateSelected: State?
+    var payedWithCard: Bool = false
     weak var toolbarDelegate: ToolbarPickerViewDelegate?
     
     override func viewDidLoad() {
@@ -77,6 +78,7 @@ class AddEditProductViewController: UIViewController {
         product?.price = ((self.priceProductTxt?.text ?? "0.0") as NSString).floatValue
         product?.image = imageProduct?.jpegData(compressionQuality: 0.9)
         product?.state = stateSelected
+        product?.payWithCard = payedWithCard
         
         view.endEditing(true)
         
@@ -117,6 +119,17 @@ class AddEditProductViewController: UIViewController {
             saveProductBtn?.setTitle("Cadastrar", for: .normal)
         }
     }
+    
+    @IBAction func paymentWithCard(_ sender: UISwitch) {
+        if sender.isOn {
+            print("pay with card")
+            payedWithCard = true
+        } else {
+            print("dont pay with card")
+            payedWithCard = false
+        }
+    }
+    
     
     private func loadStates() {
         let fetchRequest: NSFetchRequest<State> = State.fetchRequest()

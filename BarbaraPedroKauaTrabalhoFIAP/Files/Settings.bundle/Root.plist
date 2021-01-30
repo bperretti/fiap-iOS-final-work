@@ -35,14 +35,14 @@
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
 			<string>I.O.F(%)</string>
-			<key>DefaultValue</key>
-			<string>6.38</string>
 			<key>Key</key>
 			<string>iofValue</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
 			<string>NumbersAndPunctuation</string>
+			<key>DefaultValue</key>
+			<string>6.38</string>
 		</dict>
 	</array>
 </dict>

@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.registerDefaultsFromSettingsBundle()
         return true
     }
 
@@ -42,6 +43,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: -Setting bundles get default values
+    
+    func registerDefaultsFromSettingsBundle(){
+       guard let settingsBundle = Bundle.main.path(forResource: "Settings", ofType: "bundle") else {
+           print("Could not locate Settings.bundle")
+           return
+       }
+
+       guard let settings = NSDictionary(contentsOfFile: settingsBundle+"/Root.plist") else {
+           print("Could not read Root.plist")
+           return
+       }
+
+       let preferences = settings["PreferenceSpecifiers"] as! NSArray
+       var defaultsToRegister = [String: AnyObject]()
+       for prefSpecification in preferences {
+           if let post = prefSpecification as? [String: AnyObject] {
+               guard let key = post["Key"] as? String,
+                   let defaultValue = post["DefaultValue"] else {
+                       continue
+               }
+               defaultsToRegister[key] = defaultValue
+           }
+       }
+       UserDefaults.standard.register(defaults: defaultsToRegister)
+   }
 
 }
 

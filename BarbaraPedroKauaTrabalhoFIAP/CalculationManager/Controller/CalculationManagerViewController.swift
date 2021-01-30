@@ -32,6 +32,7 @@ class CalculationManagerViewController: UIViewController {
         super.viewDidLoad()
         
         self.registerStateCellNib()
+        self.addDoneButtonOnKeyboard()
         
         statesListTableView?.delegate = self
         statesListTableView?.dataSource = self
@@ -43,11 +44,7 @@ class CalculationManagerViewController: UIViewController {
         self.getFromUserDefault()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        self.saveUserDefault()
-    }
-    
+ 
     // MARK: - Methods
     private func loadStates() {
         let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
@@ -72,11 +69,13 @@ class CalculationManagerViewController: UIViewController {
         
         alert.addTextField { (nameTextField) in
             nameTextField.placeholder = "Nome do estado"
+            nameTextField.keyboardType = .alphabet
             nameTextField.text = state?.name
         }
         
         alert.addTextField { (taxPriceTextField) in
             taxPriceTextField.placeholder = "Imposto"
+            taxPriceTextField.keyboardType = .decimalPad
             if let tax = state?.tax {
                 taxPriceTextField.text = String(tax)
             }
@@ -116,6 +115,11 @@ class CalculationManagerViewController: UIViewController {
         userDefault.synchronize()
         self.iofValueTxt?.text = userDefault.string(forKey: "iofValue")
         self.dolarValueTxt?.text = userDefault.string(forKey: "dolarValue")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        self.saveUserDefault()
     }
     
     // MARK: - IBAction
@@ -178,4 +182,32 @@ extension CalculationManagerViewController: UITableViewDelegate, UITableViewData
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+}
+
+extension CalculationManagerViewController {
+    
+    // MARK: - TextField UIToolbar
+    func addDoneButtonOnKeyboard() {
+
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320.0, height: 50.0))
+        doneToolbar.barStyle = .default
+         
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+          
+          doneToolbar.items = [flexSpace, done]
+          doneToolbar.sizeToFit()
+          
+          self.dolarValueTxt?.inputAccessoryView = doneToolbar
+          self.iofValueTxt?.inputAccessoryView = doneToolbar
+          
+      }
+      
+      @objc
+      func doneButtonAction() {
+        self.dolarValueTxt?.resignFirstResponder()
+        self.iofValueTxt?.resignFirstResponder()
+        self.saveUserDefault()
+      }
 }

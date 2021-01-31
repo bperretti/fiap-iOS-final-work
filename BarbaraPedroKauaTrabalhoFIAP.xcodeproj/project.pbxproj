@@ -10,6 +10,8 @@
 		EA6B3664259CDF670067DF84 /* PurchaseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3662259CDF670067DF84 /* PurchaseListTableViewController.swift */; };
 		EA6B3677259CE9C20067DF84 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3675259CE9C20067DF84 /* PurchaseTableViewCell.swift */; };
 		EA6B3695259D25800067DF84 /* AddEditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B3694259D25800067DF84 /* AddEditProductViewController.swift */; };
+		EA73D17725C6DC5F004B01B6 /* UITextField+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA73D17625C6DC5F004B01B6 /* UITextField+DoneButton.swift */; };
+		EA73D18125C6E21D004B01B6 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA73D18025C6E21D004B01B6 /* StringUtils.swift */; };
 		EA9D4A87259BC00700D714E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A86259BC00700D714E3 /* AppDelegate.swift */; };
 		EA9D4A8E259BC00700D714E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9D4A8C259BC00700D714E3 /* Main.storyboard */; };
 		EA9D4A91259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA9D4A8F259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld */; };
@@ -47,6 +49,8 @@
 		EA6B3662259CDF670067DF84 /* PurchaseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseListTableViewController.swift; sourceTree = "<group>"; };
 		EA6B3675259CE9C20067DF84 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		EA6B3694259D25800067DF84 /* AddEditProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductViewController.swift; sourceTree = "<group>"; };
+		EA73D17625C6DC5F004B01B6 /* UITextField+DoneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneButton.swift"; sourceTree = "<group>"; };
+		EA73D18025C6E21D004B01B6 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		EA9D4A83259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarbaraPedroKauaTrabalhoFIAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9D4A86259BC00700D714E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9D4A8D259BC00700D714E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		EA73D16125C6D61E004B01B6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA73D18025C6E21D004B01B6 /* StringUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		EA9D4A7A259BC00700D714E3 = {
 			isa = PBXGroup;
 			children = (
@@ -167,12 +179,13 @@
 		EA9D4A85259BC00700D714E3 /* BarbaraPedroKauaTrabalhoFIAP */ = {
 			isa = PBXGroup;
 			children = (
-				EAE02609259E221600EDA6E4 /* TotalPurchase */,
-				EAE025F0259D99E500EDA6E4 /* CalculationManager */,
-				EA6B3692259D252B0067DF84 /* AddEditProduct */,
-				EA6B3653259CDECC0067DF84 /* PurchaseList */,
 				EA6B3652259CDEB50067DF84 /* Main */,
+				EA6B3653259CDECC0067DF84 /* PurchaseList */,
+				EA6B3692259D252B0067DF84 /* AddEditProduct */,
+				EAE025F0259D99E500EDA6E4 /* CalculationManager */,
+				EAE02609259E221600EDA6E4 /* TotalPurchase */,
 				EAE025D9259D594000EDA6E4 /* Files */,
+				EA73D16125C6D61E004B01B6 /* Utils */,
 				EAE025E7259D7EDA00EDA6E4 /* Extensions */,
 				EAE025DA259D595A00EDA6E4 /* Supporting Files */,
 				EA9D4A97259BC00700D714E3 /* Info.plist */,
@@ -219,6 +232,7 @@
 		EAE025E7259D7EDA00EDA6E4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EA73D17625C6DC5F004B01B6 /* UITextField+DoneButton.swift */,
 				EAE025E8259D7EFE00EDA6E4 /* UIViewController+Context.swift */,
 				EAE02604259E14A000EDA6E4 /* UILabel+EmptyStatus.swift */,
 			);
@@ -400,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE0260C259E223700EDA6E4 /* TotalPurchaseViewController.swift in Sources */,
+				EA73D18125C6E21D004B01B6 /* StringUtils.swift in Sources */,
 				EAE02605259E14A000EDA6E4 /* UILabel+EmptyStatus.swift in Sources */,
 				EA6B3695259D25800067DF84 /* AddEditProductViewController.swift in Sources */,
 				EA6B3664259CDF670067DF84 /* PurchaseListTableViewController.swift in Sources */,
@@ -407,6 +422,7 @@
 				EA9D4A91259BC00700D714E3 /* PurchaseDataModel.xcdatamodeld in Sources */,
 				EA9D4A87259BC00700D714E3 /* AppDelegate.swift in Sources */,
 				EA6B3677259CE9C20067DF84 /* PurchaseTableViewCell.swift in Sources */,
+				EA73D17725C6DC5F004B01B6 /* UITextField+DoneButton.swift in Sources */,
 				EAE025F3259D9A1700EDA6E4 /* CalculationManagerViewController.swift in Sources */,
 				EAE025FA259DE88000EDA6E4 /* StateTableViewCell.swift in Sources */,
 			);

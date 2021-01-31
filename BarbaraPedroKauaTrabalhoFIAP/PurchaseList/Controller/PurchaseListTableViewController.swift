@@ -12,7 +12,7 @@ class PurchaseListTableViewController: UITableViewController {
     // MARK: - Properties
     lazy var fetchedResultsController: NSFetchedResultsController<Product> = {
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-        let sortDescription: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescription: NSSortDescriptor = NSSortDescriptor(key: CoreDataStringUtils.nameSort.rawValue, ascending: true)
         fetchRequest.sortDescriptors = [sortDescription]
         
         guard let context = context else { return NSFetchedResultsController() }
@@ -51,7 +51,7 @@ class PurchaseListTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "purchaseCellIdentifier", for: indexPath) as? PurchaseTableViewCell else  { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiersStringUtils.purchaseCellIdentifier.rawValue, for: indexPath) as? PurchaseTableViewCell else  { return UITableViewCell() }
         
         let product = fetchedResultsController.object(at: indexPath)
         cell.configureCell(with: product)
@@ -66,7 +66,7 @@ class PurchaseListTableViewController: UITableViewController {
             do {
                 try context?.save()
             } catch {
-                print("error to delete a product in db")
+                print(CoreDataStringUtils.errorProductDelete.rawValue)
             }
         }
     }

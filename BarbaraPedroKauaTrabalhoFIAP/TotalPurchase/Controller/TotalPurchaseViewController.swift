@@ -17,6 +17,7 @@ class TotalPurchaseViewController: UIViewController {
     private var iofValue:Float = 0.0
     private var dollarValue:Float = 0.0
     private var userDefault = UserDefaults.standard
+    private let defaultStringValue = "0.0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +33,20 @@ class TotalPurchaseViewController: UIViewController {
     // MARK: - Methods
     private func getIOFandDollarValue() {
         userDefault.synchronize()
-        self.iofValue = ((userDefault.string(forKey: "iofValue") ?? "0.0") as NSString).floatValue
-        self.dollarValue = ((userDefault.string(forKey: "dolarValue") ?? "0.0") as NSString).floatValue
+        self.iofValue = ((userDefault.string(forKey: UserDefaultStringUtils.iofValue.rawValue) ?? defaultStringValue) as NSString).floatValue
+        self.dollarValue = ((userDefault.string(forKey: UserDefaultStringUtils.dolarValue.rawValue) ?? defaultStringValue) as NSString).floatValue
     }
     
     private func loadProducts() {
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-        let sortDescription: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescription: NSSortDescriptor = NSSortDescriptor(key: CoreDataStringUtils.nameSort.rawValue, ascending: true)
         fetchRequest.sortDescriptors = [sortDescription]
         
         do {
             productsList = try context?.fetch(fetchRequest) ?? []
             self.calculateTotalValues()
         } catch {
-            print("Error return states list from db")
+            print(CoreDataStringUtils.errorState.rawValue)
         }
     }
     
@@ -54,8 +55,8 @@ class TotalPurchaseViewController: UIViewController {
             self.calculateDollarValue(products)
             self.calculateReaisValue(products)
         } else {
-            self.totalDollarLbl?.text = "0.0"
-            self.totalReaisLbl?.text = "0.0"
+            self.totalDollarLbl?.text = defaultStringValue
+            self.totalReaisLbl?.text = defaultStringValue
         }
     }
     

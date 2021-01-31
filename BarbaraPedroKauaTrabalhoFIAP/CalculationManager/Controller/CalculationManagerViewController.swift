@@ -81,7 +81,8 @@ class CalculationManagerViewController: UIViewController {
     }
     
     private func showStateAlert(for state: State? = nil) {
-        let title = state == nil ? GeneralStringUtils.addText.rawValue : GeneralStringUtils.editText.rawValue
+        let title = state == nil ? GeneralStringUtils.addStateText.rawValue : GeneralStringUtils.editStateText.rawValue
+        let titleBtn = state == nil ? GeneralStringUtils.addText.rawValue : GeneralStringUtils.editText.rawValue
         
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
@@ -99,22 +100,22 @@ class CalculationManagerViewController: UIViewController {
             }
         }
         
-        let okAction = UIAlertAction(title: title, style: .default) { (_) in
-            guard let context = self.context else { return }
-            let state = state ?? State(context: context)
-            
-            if let textFields = alert.textFields, textFields.count > 1 {
-                state.name = textFields.first?.text
+        let okAction = UIAlertAction(title: titleBtn, style: .default) { (_) in
+
+            if let textFields = alert.textFields, textFields.count > 1, let firstText = textFields.first?.text, !firstText.isEmpty {
+                
+                guard let context = self.context else { return }
+                let state = state ?? State(context: context)
+                state.name = firstText
                 state.tax = ((textFields[1].text ?? self.defaultStringValue) as NSString).floatValue
+                
+                do {
+                    try self.context?.save()
+                    self.loadStates()
+                } catch {
+                    print(CoreDataStringUtils.errorState.rawValue)
+                }
             }
-            
-            do {
-                try self.context?.save()
-                self.loadStates()
-            } catch {
-                print(CoreDataStringUtils.errorState.rawValue)
-            }
-            
         }
         alert.addAction(okAction )
         

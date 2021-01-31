@@ -11,6 +11,8 @@ public enum GeneralStringUtils: String {
     case addText = "Adicionar"
     case editText = "Editar"
     case saveText = "Cadastrar"
+    case addStateText = "Adicionar Estado"
+    case editStateText = "Editar Estado"
     case editProductText = "Editar Produto"
     case saveProductText = "Cadastrar Produto"
     case cancelText = "Cancelar"

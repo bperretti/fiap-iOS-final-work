@@ -21,6 +21,7 @@ class AddEditProductViewController: UIViewController {
     @IBOutlet weak var priceProductTxt: UITextField?
     @IBOutlet weak var saveProductBtn: UIButton?
     @IBOutlet weak var imageProductBtn: UIButton?
+    @IBOutlet weak var payWithCardSwitch: UISwitch?
     
     // MARK: - Properties
     var product: Product?
@@ -132,6 +133,8 @@ class AddEditProductViewController: UIViewController {
                 imageProduct = UIImage(data: data)
                 imageProductBtn?.setBackgroundImage(imageProduct, for: .normal)
             }
+            
+            payWithCardSwitch?.isOn = product.payWithCard
             
             saveProductBtn?.setTitle(GeneralStringUtils.editText.rawValue.uppercased(), for: .normal)
         } else {

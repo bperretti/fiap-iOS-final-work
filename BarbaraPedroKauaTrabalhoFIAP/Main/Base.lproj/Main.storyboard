@@ -455,6 +455,7 @@
                         <outlet property="imageProductBtn" destination="Z53-j5-02k" id="0Im-CQ-NJj"/>
                         <outlet property="nameProductTxt" destination="awl-xo-fy0" id="bZB-2i-pvp"/>
                         <outlet property="nameStatetxt" destination="RpI-kS-BBt" id="7kO-CD-xbZ"/>
+                        <outlet property="payWithCardSwitch" destination="Geh-tM-qeG" id="mNH-z6-ZoZ"/>
                         <outlet property="priceProductTxt" destination="JKj-Ie-5S7" id="1Fz-wG-fMt"/>
                         <outlet property="saveProductBtn" destination="bmV-5b-g2Z" id="ha5-w7-OuH"/>
                     </connections>

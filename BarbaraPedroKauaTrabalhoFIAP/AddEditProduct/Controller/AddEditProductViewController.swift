@@ -91,7 +91,7 @@ class AddEditProductViewController: UIViewController {
         do {
             try context?.save()
             navigationController?.popViewController(animated: true)
-        } catch let error {
+        } catch {
             print(CoreDataStringUtils.errorProductSave.rawValue)
         }
     }

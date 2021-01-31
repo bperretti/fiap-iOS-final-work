@@ -449,7 +449,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" Cadastrar Produto" id="hfE-at-rlr">
-                        <barButtonItem key="backBarButtonItem" title=" " id="kis-Jm-jaE"/>
+                        <barButtonItem key="backBarButtonItem" title="Cadastrar Produto" id="kis-Jm-jaE"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageProductBtn" destination="Z53-j5-02k" id="0Im-CQ-NJj"/>

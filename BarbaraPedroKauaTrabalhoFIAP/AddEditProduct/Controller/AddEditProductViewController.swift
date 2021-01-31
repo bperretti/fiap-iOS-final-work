@@ -29,7 +29,7 @@ class AddEditProductViewController: UIViewController {
     var statesList: [State] = []
     let statePickerView = UIPickerView()
     var stateSelected: State?
-    var payedWithCard: Bool = false
+    var payedWithCard: Bool = true
     weak var toolbarDelegate: ToolbarPickerViewDelegate?
     private let defaultStringValue = "0.0"
     
